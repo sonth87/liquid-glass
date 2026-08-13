@@ -65,7 +65,7 @@ export function useDraggable(options: UseDraggableOptions = {}) {
     style: {
       transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
       cursor: isDragging ? "grabbing" : "grab",
-      userSelect: isDragging ? "none" : ("auto" as const),
+      userSelect: (isDragging ? "none" : "auto") as React.CSSProperties["userSelect"],
       touchAction: "none",
       zIndex: isDragging ? 1000 : 10,
     },

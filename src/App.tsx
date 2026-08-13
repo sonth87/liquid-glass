@@ -252,7 +252,11 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
-      <ConfigPanel config={glassConfig} onChange={setGlassConfig} />
+      <ConfigPanel
+        config={glassConfig}
+        onChange={setGlassConfig}
+        onReset={handleReset}
+      />
     </>
   );
 }
